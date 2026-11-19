@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Emprendimiento a Domicilio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Delivery Express</div>
+    <nav class="nav">
+      <a href="#catalogo">Catalogo</a>
+      <a href="#ia">Asistente IA</a>
+      <a href="#pedido">Pedir</a>
+      <a href="#admin">Admin</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Tu pedido directo hasta tu puerta</h1>
+    <p>Rapido, fresco y facil de pedir desde tu celular.</p>
+    <a href="#catalogo" class="btn">Ver catalogo</a>
+  </section>
+
+  <section id="catalogo" class="section">
+    <h2>Catalogo</h2>
+    <div id="lista-productos" class="grid"></div>
+  </section>
+
+  <section id="ia" class="section">
+    <h2>Asistente de Pedidos (IA)</h2>
+    <p>Dime que antojo tienes o cuantas personas comen y te sugiero una opcion.</p>
+    <input id="input-ia" type="text" placeholder="Ej: algo rapido para 2 personas" />
+    <button id="btn-ia" type="button" class="btn">Recomendar</button>
+    <div id="resultado-ia" class="box"></div>
+  </section>
+
+  <section id="pedido" class="section">
+    <h2>Hacer pedido / Contacto</h2>
+    <form id="form-pedido" class="form">
+      <input id="cliente-nombre" type="text" placeholder="Tu nombre" required />
+      <input id="cliente-telefono" type="tel" placeholder="Telefono o WhatsApp" required />
+      <input id="cliente-direccion" type="text" placeholder="Direccion de entrega" required />
+      <textarea id="cliente-detalle" placeholder="Que deseas pedir o consultar?" required></textarea>
+      <button type="submit" class="btn">Enviar solicitud</button>
+    </form>
+    <p id="mensaje-pedido"></p>
+  </section>
+
+  <section id="admin" class="section">
+    <h2>Panel Admin</h2>
+    <div id="login-admin" class="form">
+      <input id="admin-usuario" type="text" placeholder="Usuario (ej: admin)" />
+      <input id="admin-clave" type="password" placeholder="Contrasena (ej: 1234)" />
+      <button id="btn-login" type="button" class="btn">Entrar</button>
+      <p id="error-login"></p>
+    </div>
+
+    <div id="panel-gestion" style="display: none;">
+      <p>Pedidos / solicitudes registrados:</p>
+      <ul id="lista-pedidos"></ul>
+      <button id="btn-limpiar" type="button" class="btn-secundario">Borrar registros</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
