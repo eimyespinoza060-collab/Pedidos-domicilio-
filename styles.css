@@ -202,4 +202,10 @@ input, textarea {
   color: #6b7280;
   font-size: 0.9rem;
 }
+.footer {
+  background: #1f2937;
+  color: #ffffff;
+  margin-top: 24px;
+  border-radius: 14px 14px 0 0;
+}
 
