@@ -15,4 +15,10 @@ Aplicación web de entrega a domicilio estilo PedidosYa, desarrollada con HTML, 
 
 ## Sitio en vivo
 https://eimyespinoza060-collab.github.io/Pedidos-domicilio-/
+
+## Tecnologías utilizadas
+- HTML5
+- CSS3 (Diseño responsive y estilo PedidosYa)
+- JavaScript (`localStorage` para persistencia de pedidos y asistente de sugerencias)
+- GitHub Pages para despliegue en vivo
  
