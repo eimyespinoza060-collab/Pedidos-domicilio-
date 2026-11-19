@@ -145,3 +145,5 @@ if (btnLimpiar) {
 }
 
 renderProductos();
+  { id: 7, categoria: "super", nombre: "Pack Bebidas Frías x6", tiempo: "18 min", envio: "Envío Gratis", precio: 5.50, desc: "6 sodas o jugos surtidos bien fríos para acompañar." },
+  { id: 8, categoria: "comida", nombre: "Tacos Mexicanos x3", tiempo: "25 min", envio: "Envío $1.00", precio: 7.90, desc: "3 tacos al pastor con salsa verde, cilantro y cebolla." }
