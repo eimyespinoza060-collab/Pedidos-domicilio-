@@ -207,5 +207,16 @@ input, textarea {
   color: #ffffff;
   margin-top: 24px;
   border-radius: 14px 14px 0 0;
+}#mensaje-pedido {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #15803d;
 }
+
+#error-login {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #dc2626;
+}
+
 
