@@ -3,67 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Emprendimiento a Domicilio</title>
+  <title>PideYa - Tu delivery al instante</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
-    <div class="logo">Delivery Express</div>
+    <div class="logo">🛵 PideYa</div>
     <nav class="nav">
-      <a href="#catalogo">Catalogo</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#catalogo">Explorar</a>
       <a href="#ia">Asistente IA</a>
-      <a href="#pedido">Pedir</a>
+      <a href="#pedido">Tu Pedido</a>
       <a href="#admin">Admin</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Tu pedido directo hasta tu puerta</h1>
-    <p>Rapido, fresco y facil de pedir desde tu celular.</p>
-    <a href="#catalogo" class="btn">Ver catalogo</a>
+    <span class="badge">⚡ Entregas en 20 - 35 min</span>
+    <h1>¡Pide lo que quieras, cuando quieras!</h1>
+    <p>Restaurantes, súper, farmacia y antojos directo a tu puerta.</p>
+    <a href="#catalogo" class="btn">Explorar tiendas y menú</a>
+  </section>
+
+  <section id="categorias" class="section">
+    <h2>¿Qué se te antoja hoy?</h2>
+    <div class="cats">
+      <button type="button" class="cat-btn" data-cat="todos">🔥 Todo</button>
+      <button type="button" class="cat-btn" data-cat="comida">🍔 Comida rápida</button>
+      <button type="button" class="cat-btn" data-cat="super">🛒 Súper</button>
+      <button type="button" class="cat-btn" data-cat="postres">🍦 Postres</button>
+    </div>
   </section>
 
   <section id="catalogo" class="section">
-    <h2>Catalogo</h2>
+    <h2>Tiendas y combos destacados</h2>
     <div id="lista-productos" class="grid"></div>
   </section>
 
   <section id="ia" class="section">
-    <h2>Asistente de Pedidos (IA)</h2>
-    <p>Dime que antojo tienes o cuantas personas comen y te sugiero una opcion.</p>
-    <input id="input-ia" type="text" placeholder="Ej: algo rapido para 2 personas" />
-    <button id="btn-ia" type="button" class="btn">Recomendar</button>
+    <h2>🤖 Asistente de Antojos (IA)</h2>
+    <p>Dime qué quieres comer, cuánto quieres gastar o cuántas personas son.</p>
+    <input id="input-ia" type="text" placeholder="Ej: hamburguesa para 2 o algo dulce" />
+    <button id="btn-ia" type="button" class="btn">Sugerir pedido</button>
     <div id="resultado-ia" class="box"></div>
   </section>
 
   <section id="pedido" class="section">
-    <h2>Hacer pedido / Contacto</h2>
+    <h2>🛍️ Completa tu pedido a domicilio</h2>
     <form id="form-pedido" class="form">
-      <input id="cliente-nombre" type="text" placeholder="Tu nombre" required />
-      <input id="cliente-telefono" type="tel" placeholder="Telefono o WhatsApp" required />
-      <input id="cliente-direccion" type="text" placeholder="Direccion de entrega" required />
-      <textarea id="cliente-detalle" placeholder="Que deseas pedir o consultar?" required></textarea>
-      <button type="submit" class="btn">Enviar solicitud</button>
+      <input id="cliente-nombre" type="text" placeholder="Tu nombre completo" required />
+      <input id="cliente-telefono" type="tel" placeholder="Celular / WhatsApp" required />
+      <input id="cliente-direccion" type="text" placeholder="Dirección exacta (barrio, calle, casa)" required />
+      <textarea id="cliente-detalle" placeholder="Tu carrito / productos seleccionados" required></textarea>
+      <button type="submit" class="btn">Confirmar pedido ahora</button>
     </form>
     <p id="mensaje-pedido"></p>
   </section>
 
   <section id="admin" class="section">
-    <h2>Panel Admin</h2>
+    <h2>🔐 Panel Repartidor / Admin</h2>
     <div id="login-admin" class="form">
-      <input id="admin-usuario" type="text" placeholder="Usuario (ej: admin)" />
-      <input id="admin-clave" type="password" placeholder="Contrasena (ej: 1234)" />
-      <button id="btn-login" type="button" class="btn">Entrar</button>
+      <input id="admin-usuario" type="text" placeholder="Usuario (admin)" />
+      <input id="admin-clave" type="password" placeholder="Contraseña (1234)" />
+      <button id="btn-login" type="button" class="btn">Ingresar al panel</button>
       <p id="error-login"></p>
     </div>
 
     <div id="panel-gestion" style="display: none;">
-      <p>Pedidos / solicitudes registrados:</p>
+      <p><strong>Pedidos activos en tiempo real:</strong></p>
       <ul id="lista-pedidos"></ul>
-      <button id="btn-limpiar" type="button" class="btn-secundario">Borrar registros</button>
+      <button id="btn-limpiar" type="button" class="btn-secundario">Vaciar historial</button>
     </div>
   </section>
+
+  <footer class="footer">
+    <p>🛵 PideYa Delivery • Atención todos los días de 8:00 AM a 11:00 PM</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
 </html>
+
